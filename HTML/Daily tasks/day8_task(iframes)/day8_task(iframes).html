@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 task - iframes</title>
+</head>
+<body>
+    <!--Main table-->
+    <table border="2px" cellspacing="0" cellpadding="20px" width="1200px" height="550px">
+
+        <!--Top row-->
+        <tr height="100px">
+            <td width="80px">
+                <img src="day8_task(image).jpeg" alt="unble to load" width="80px" height="100px">
+            </td>
+
+            <th colspan="2"><font size="6">JSR MUSIC</font></th>
+        </tr>
+
+        <!--Second section-->
+        <tr>
+            <td align="center"><font size="6">NAME</font></td>
+
+            <td width="50%"><font size="6">ABOUT</font></td>
+
+            <td width="50%"><font size="6">DOWNLOAD</font></td>
+        </tr>
+
+        <!--Third section-->
+        <tr>
+            <td>
+                <font size="5">
+                <a href="hindi_menu(day8).html" target="menu">hindi</a>
+                <br>
+                <a href="punjabi_menu(day8).html" target="menu">punjabi</a>
+            </font>
+            </td>
+            
+            <!--iframe for opening second menu-->
+            <td>
+                <iframe name="menu" width="100%" height="100%" frameborder="0"></iframe>
+            </td>
+
+            <!--iframe for playing the media-->
+            <td>
+                <iframe name="player" frameborder="0" width="100%" height="100%"></iframe>
+            </td>
+
+        </tr>
+
+        <!--Bottom section-->
+        <tr height="50px">
+            <th colspan="3">
+                <font size="5">&copy;aman</font>
+            </th>
+        </tr>
+
+    </table>    <!--Table close-->
+</body>
+</html>
