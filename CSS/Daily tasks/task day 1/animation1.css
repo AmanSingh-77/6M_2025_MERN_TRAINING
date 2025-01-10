@@ -1,0 +1,36 @@
+
+/*style for div containing the car pic*/
+#imagediv{
+    height: 200px;
+    
+}
+
+/* style for car pic */
+#pic{
+    height: 200px ;
+    width: 300px;
+    position: relative;
+    animation: car 4s ease-in-out infinite ;
+    z-index: 2;
+}
+
+/* style for div containing roadpic */
+#roaddiv{
+    width: 1500px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* keyframes for animation */
+@keyframes car {
+    
+    from{
+        top:0px;
+        left:0px;
+    }
+
+    to{
+        top:0px;
+        left:1290px;
+    }
+}
