@@ -1,0 +1,44 @@
+*{
+    background-color: rgba(225, 9, 249, 0.663);
+}
+
+#star{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    margin-left: 600px;
+    position: relative;
+    animation: move 7s linear infinite;
+}
+
+@keyframes move {
+    0%{
+        top:0px;
+        left:0px;
+    }
+
+    20%{
+        top:600px;
+        left:400px;
+    }
+
+    40%{
+        top:300px;
+        left:-400px;
+    }
+
+    60%{
+        top:300px;
+        left:400px;
+    }
+
+    80%{
+        top:600px;
+        left: -400px;
+    }
+
+    100%{
+        top:0px;
+        left:0px;
+    }
+}
