@@ -1,0 +1,120 @@
+.container{
+    height: 4050px;
+    background-image: url(parallax_images/img_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    
+}
+
+.heading{
+    font-size: 200px;
+    font-weight: bolder;
+    font-family: fantasy;
+    color: white;
+    margin: 200px;
+    text-align: center;
+}
+
+.button{
+    background-color: rgba(137, 43, 226, 0.5);
+    margin-bottom: 100px;
+    padding: 20px 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.div2{
+    text-align: center;
+    height: 300px;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: url(parallax_images/img_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.8;
+}
+
+
+.text{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: pacifico;
+    text-align: left;
+}
+
+
+.div3{
+    height: 600px;
+    background-image: url(parallax_images/img_4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 70px 30px;
+    text-align: center;
+
+}
+
+.div4{
+    text-align: center;
+    height: 670px;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: url(parallax_images/img_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.8;
+    
+}
+
+.div5{
+    height: 700px;
+    background-image: url(parallax_images/img_3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.div6{
+    text-align: center;
+    height: 440px;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: url(parallax_images/img_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.8;
+}
+
+.div7{
+    height: 600px;
+    background-image: url(parallax_images/img_5.png);
+    background-size:450px;
+    background-repeat: no-repeat;
+    background-position: 100px;
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 270px;
+}
+
+.sub_head{
+    color: white;
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.foot{
+    height: 40px;
+    background-color: hwb(0 0% 100%);
+    text-align: center;
+    color:white;
+}
