@@ -1,0 +1,47 @@
+/* Style for main container */
+.container{
+    background-color: grey;
+    height: 640px;
+    width: 640px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+/* White boxes */
+.white{
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+
+/* Black boxes */
+.black{
+    background-color: black;
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+
+/* style for all pieces */
+.pieces{
+    font-size:45px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* style for pieces with white background */
+.pieces_white_bg{
+    color:black;
+}
+
+/* style for pieces with black background */
+.pieces_black_bg{
+    color: white;
+}
+
+/* Hover property */
+.pieces:hover{
+    color: rgb(165, 42, 42);
+}
