@@ -1,7 +1,7 @@
 .container{
     background-color: palegreen;
-    height: 770px;
-    width: 530px;
+    height: 580px;
+    width: 500px;
     margin: auto;
     padding-left: 100px;
     padding-right: 100px;
@@ -9,7 +9,7 @@
 }
 
 .upperbody{
-    height: 240px ;
+    height: 150px ;
     padding-top: 20px;
     padding-left: 80px;
     position: relative;
@@ -17,58 +17,62 @@
 }
 
 .ears{
-    height: 100px;
+    height: 40px;
     width: 270px;
 }
 
 .ear1{
-    height: 125px;
-    width: 125px;
+    height: 70px;
+    width: 70px;
     background-color: #fac6ce;
     border: solid 2px transparent;
     border-radius: 50%;
+    margin-left: 25px;
+    margin-top: 5px;
     float: left;
 }
 
 .ear2{
-    height: 125px;
-    width: 125px;
+    height: 70px;
+    width: 70px;
     background-color: #fac6ce;
     border: solid 2px transparent;
     border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 5px;
     float: right;
 }
 
 .head{
     background-color: #fac6ce;
-    height: 190px;
-    width: 250px;
+    height: 130px;
+    width: 200px;
     border-radius: 50%;
-    margin-left: 20px;
+    margin-left: 40px;
     padding-top: 50px;
    
 }
 
 .eyes{
     height: 30px;
-    width: 130px;
+    width: 100px;
     margin-left: 60px;
 }
 
 .eye1{
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     background-color: black;
     border-radius: 50%;
     float: left;
 }
 
 .eye2{
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     background-color: black;
     border-radius: 50%;
-    margin-left: 60px;
+    margin-right: 10px;
     float: right;
 }
 
@@ -79,7 +83,7 @@
     border: solid 2px transparent;
     border-radius: 50%;
     margin-top: 10px;
-    margin-left: 95px;
+    margin-left: 75px;
 }
 
 .nostrils{
@@ -106,9 +110,9 @@
 }
 
 .lowerbody{
-    height: 320px;
-    width: 600px;
-    padding-left:30px;
+    height: 200px;
+    width: 500px;
+    padding-left:75px;
     padding-bottom: 30px;
     padding-top: 30px;
     z-index: 1;
@@ -116,8 +120,8 @@
 
 .torso{
     background-color: #c3354d;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%; 
     position: fixed;
 }
@@ -128,35 +132,36 @@
     border-right:150px #fac6ce solid;
     border-top:150px transparent solid;
     border-bottom:0px transparent solid;
-    margin-left: 380px;
-    margin-top: 140px;
+    margin-left: 285px;
+    margin-top: 70px;
     
 }
 
 .feet{
     height: 100px;
     width: 560px;
-    padding-left: 13px;
+    padding-left: 45px;
+    padding-top: 20px;
     position: relative;
     z-index: 2;
 }
 
 .foot1{
     background-color: #fac6ce;
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     border: 2px solid transparent;
     border-radius: 50%;
-    margin-left: 53px;
+    margin-left: 59px;
     float: left;
 }
 
 .foot2{
     background-color: #fac6ce;
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     border: 2px solid transparent;
     border-radius: 50%;
     float: left;
-    margin-left:95px;
+    margin-left:85px;
 }
