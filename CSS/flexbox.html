@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox properties</title>
+
+    <style>
+        .main{
+            height: 500px;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+        }
+
+        .main div{
+            height: 100px;
+            width: 100px;
+            background-color: beige;
+            margin: 0 10px;
+        }
+
+        .child1{
+            order: 3;
+            flex-grow: 2;
+        }
+        .child2{
+            order: 4;
+            flex-grow: 1;
+        }
+        .child3{
+            order: 5;
+            flex-shrink: 0;
+            align-self: baseline;
+        }
+        .child4{
+            order: 2;
+            flex-shrink: 2;
+        }
+        .child5{
+            order: 1;
+        }
+
+        .main2{
+            height: 500px;
+            background-color:bisque;
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            padding-top: 10px;
+        }
+
+        .kid1{
+            /* height: 100px;
+            width: 100px; */
+            flex-basis: 100px;
+            background-color: black;
+        }
+        .kid2{
+            /* height: 100px;
+            width: 100px; */
+            flex-basis: 100px;
+            background-color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="main">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+        <div class="child4">4</div>
+        <div class="child5">5</div>
+    </div>
+
+    <div class="main2">
+        <div class="kid1"></div>
+        <div class="kid2"></div>
+    </div>
+</body>
+</html>
