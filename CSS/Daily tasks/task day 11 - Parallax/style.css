@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+}
+
 .container{
     height: 4050px;
     background-image: url(parallax_images/img_1.jpg);
@@ -17,6 +21,10 @@
     color: white;
     margin: 200px;
     text-align: center;
+}
+
+.heading:hover{
+    text-shadow: 0 0 50px rgb(93, 0, 255);
 }
 
 .button{
