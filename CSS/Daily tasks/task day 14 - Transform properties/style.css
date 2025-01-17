@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for main container */
+.container{
+    height: 80vh;
+    width: 50vw;
+    display: flex;
+    align-items: last baseline ;
+    position: relative;
+    float: left;
+    margin-left: 10px;
+}
+
+/* Styles for all circles/individual circles at end points */
+.circles{
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle1{
+    left: 3px;
+}
+
+.circle2{
+    left: 49%;
+    top: 5px;
+}
+
+.circle3{
+    left: 95%;
+}
+
+.circle4{
+    left: 4%;
+    top: 42%;
+}
+
+.circle5{
+    left: 93%;
+    top: 42%;
+}
+
+
+/* Style for container with the horizontol rules */
+.hr_container{
+    position: absolute;
+    float: left;
+    height: 80vh;
+    width: 50vw;
+    margin-left: 10px;
+}
+
+
+/* Style for all hr's / horizontol hr's */
+.hrs{
+    color: white;
+    width: 700px;
+    position: relative;
+    z-index: -1;
+    height: 1px;
+}
+
+.hr1{
+    transform: rotate(-125deg);
+    top: 300px;
+    left: 270px;
+    width: 640px;
+}
+
+.hr2{
+    width: 660px;
+    transform: rotate(126deg);
+    top: 300px;
+    left: -130px;
+}
+
+.hr3{
+    width: 750px;
+    top: 70%;
+    left: 20px;
+    transform: rotate(23deg);
+}
+
+.hr4{
+    top: 45%;
+    width: 90%;
+    left: 50px;
+}
+
+.hr5{
+    width: 770px;
+    top: 70%;
+    left: 10px;
+    transform: rotate(-22deg);
+}
+
+
+/* Style for main object */
+.item{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-top: 3px solid yellow;
+    border-left: 3px solid green;
+    border-right: 3px solid red;
+    border-bottom: 3px solid blue;
+    border-radius: 30%;
+    position: relative;
+    animation: move 7s linear infinite;
+    box-shadow: 0px 0px 50px aqua;
+    z-index: 1;
+}
+
+@keyframes move {
+    0%{
+        top:0px;
+        left:0px;
+        transform: rotate(-850deg);
+
+    }
+
+    20%{
+        top:-550px ;
+        left: 50%;
+    }
+
+    40%{
+        top: 0px;
+        left:95%;
+    }
+
+    60%{
+        top: -50%;
+        left: 10px;
+    }
+
+    80%{
+        top: -50%;
+        left:95%;
+    }
+
+    100%{
+        top:0px;
+        left: 0px;
+    }
+}
