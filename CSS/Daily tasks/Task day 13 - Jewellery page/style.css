@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for navbar */
+.navbar{
+    background-color: white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Text in navbar */
+.navbar span{
+    color: #ca804b;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.navbar span a{
+    text-decoration: none;
+    color: #ca804b;
+}
+
+
+/* Items in navbar */
+.list{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 20px;
+}
+
+.list ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+.list ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: small;
+    font-weight: lighter;
+    margin: 0px 5px;
+}
+
+.list ul li a:hover{
+    text-decoration: underline;
+    color: #ca804b;
+}
+
+
+/* Style for background image 1 */
+.background1{
+    height: 1000px;
+    background-image: url(Jewll_images/img_1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 5px;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+}
+
+/* Button in background 1 */
+.shop_button{
+    background-color: orange;
+    padding: 15px 35px;
+    border: 0px transparent;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 150px;
+}
+
+.shop_button:hover{
+    background-color: white;
+    color: #ca804b;
+}
+
+
+/* Style for proucts section */
+.content1{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    background-color: whitesmoke;
+}
+
+.content1 h1{
+    color: #ca804b;
+    font-size: 50px;
+    /* padding-bottom: 7px; */
+}
+
+.content1 p{
+    margin-bottom: 10px;
+}
+
+.products{
+    margin-top: 10px;
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.products div p{
+    text-align: center;
+}
+
+.item1{
+    height:400px ;
+    width: 300px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.item1 img{
+    height: 217px;
+    width: 216px;
+}
+
+.item1 h3{
+    color: #ca804b;
+    margin-bottom: 10px;
+}
+
+.item1 p{
+    margin-top: 3px;
+    font-family:'Times New Roman', Times, serif;
+    word-spacing: 4px;
+}
+
+.item1 span{
+    font-size: 20px;
+    margin-top: 5px;
+    color: #ca804b;
+}
+
+.cart_button{
+    color: white;
+    background-color: #ca804b;
+    border: 0;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.cart_button:hover{
+    text-decoration: underline;
+    background-color: white;
+    color: #ca804b;
+}
+
+
+.item2{
+    height:400px ;
+    width: 300px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.item2 img{
+    height: 217px;
+    width: 216px;
+}
+
+.item2 h3{
+    color: #ca804b;
+    margin-bottom: 10px;
+}
+
+.item2 p{
+    margin-top: 3px;
+    font-family:'Times New Roman', Times, serif;
+    word-spacing: 4px;
+}
+
+.item2 span{
+    font-size: 20px;
+    margin-top: 5px;
+    color: #ca804b;
+}
+
+.item3{
+    height:400px ;
+    width: 300px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.item3 img{
+    height: 217px;
+    width: 216px;
+}
+
+.item3 h3{
+    color: #ca804b;
+    margin-bottom: 10px;
+}
+
+.item3 p{
+    margin-top: 3px;
+    font-family:'Times New Roman', Times, serif;
+    word-spacing: 4px;
+}
+
+.item3 span{
+    font-size: 20px;
+    margin-top: 5px;
+    color: #ca804b;
+}
+
+
+
+/* Background image 2 */
+.background2{
+    height: 500px;
+    background: url(Jewll_images/img_2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.back2{
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    opacity: 0.3;
+}
+
+
+/* Style for about us section */
+.content2{
+    height: 410px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content2 h1{
+    color: #ca804b;
+    text-shadow: 0 0 5px #ca804b;
+    margin-bottom: 20px;
+    font-size: 40px;
+    justify-self: center;
+    align-self: center;
+}
+
+.content2_area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    text-align: justify;
+}
+
+.about_cont{
+   padding-left: 10px;
+   padding-right: 30px;
+}
+
+.parah1{
+    line-height: 30px;
+}
+.parah2{
+    background-color: lightgray;
+}
+
+
+.about_img{
+    height: 300px;
+    width: 700px;
+    margin-left:10px ;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+
+/* Style for what our clients say */
+.content3{
+    height: 150px;
+    background-color: #ca804b;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.client{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.maria{
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+
+/* Footer */
+.foot{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_us{
+    font-weight: bold;
+    color: #ca804b;
+}
