@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* First Background */
+
+.background1{
+    height: 60vh;
+    width: 100%;
+    background-image: url(Zomato_images/img_1.avif);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Navbar */
+.navbar{
+    height: 9vh;
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 3.5vw;
+}
+
+.left_nav{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.right_nav{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    font-size: 12px;
+}
+
+.right_nav span{
+    color: white;
+    font-size: 22px;
+    font-weight: 350;
+    display: flex;
+    align-items: center;
+}
+
+.nav_opt a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav_opt a:hover{
+    color: rgb(248, 49, 49);
+    cursor: pointer;
+}
+
+
+.profile{
+    width: 19%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile span{
+    font-weight: 450;
+}
+
+.profile_pic{
+    display: flex;
+    height: 5vh;
+    width: 2.5vw;
+    background-color: pink;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.image{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop_icon{
+    height: 25px;
+    width: 25px;
+    margin-top: 5px;
+}
+
+/* Dropdown menu */
+.drop_menu{
+    height: 18vh;
+    width: 9vw;
+    padding: 2vh;
+    border-radius: 5%;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: 85%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+
+}
+
+.drop_menu span{
+    color: black;
+    font-size: 16px;
+}
+
+.drop_icon:hover{
+    transform: rotate(180deg);
+}
+
+.drop_icon:hover + .drop_menu{
+    display: inline-flex;
+}
+
+
+/* Branding part */
+.brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    height: 22vh;
+    width: 100%;
+    color: white;
+    margin-top: 3vh;
+    
+}
+
+.zomato{
+    font-size: 10vh;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.tagline{
+    font-size: 5vh;
+    font-weight: 450;
+}
+
+
+.input_area{
+    height: 7vh;
+    width: 48vw;
+    background-color: white;
+    align-self: center;
+    position: relative;
+    top: -9vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 14vh;
+}
+
+.address{
+    display: flex;
+    height: 100%;
+    background-color: white;
+    width: 15vw;
+    padding-left: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.location_icon{
+    color: rgba(255, 0, 0, 0.559);
+    align-self: center;
+    font-size: 1.5em;
+}
+
+.add_select{
+    outline: none;
+    border: none;
+    color: gray;
+    width: 180px;
+    font-size: 16px;
+}
+
+.divide{
+    align-self: center;
+    font-size: 20px;
+    font-weight: 100;
+    color: gray;
+}
+
+.searching{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 35vw;
+    padding-left: 20px;
+   
+}
+
+.search_icon{
+    color: gray;
+    font-size: 1.5em;
+    margin-right: 10px;
+    
+}
+
+.searchbox{
+    height: 100%;
+    width: 90%;
+    border: 0;
+    font-size: 15px;
+    outline: none;
+}
+
+
+/* Second Content Area */
+.second_area{
+    display: flex;
+    justify-content: space-evenly;
+    height: 39vh;
+    width: 100%;
+    padding-top: 30px;
+}
+
+
+/* Order online tab */
+.second_one{
+    height: 33vh;
+    width: 41vw;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2vh;
+    margin-left: 85px;
+}
+
+
+.one_back{
+    height: 75%;
+    width: 100%;
+    background-image: url(Zomato_images/img_2.avif);
+    background-size:100%;
+    background-position: 30%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.second_area_heading{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top :1vh ;
+    margin-left :2vh ;
+}
+
+.second_area_text{
+    margin-left :2vh ;
+    color: rgb(86, 86, 86);
+}
+
+
+/* Dining Tab */
+.second_two{
+    height: 33vh;
+    width: 41vw;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2vh;
+    margin-right: 85px;
+}
+
+.two_back{
+    height: 75%;
+    width: 100%;
+    background-image: url(Zomato_images/img_3.avif);
+    background-size:100%;
+    background-position: 30%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
