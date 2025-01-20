@@ -175,7 +175,6 @@
     padding-left: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-
 }
 
 .location_icon{
@@ -236,8 +235,8 @@
 
 /* Order online tab */
 .second_one{
-    height: 33vh;
-    width: 41vw;
+    height: 30vh;
+    width: 40vw;
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 20px;
@@ -245,6 +244,11 @@
     flex-direction: column;
     padding-bottom: 2vh;
     margin-left: 85px;
+}
+
+.second_one:hover{
+    height: 32vh;
+    width: 42vw;
 }
 
 
@@ -274,8 +278,8 @@
 
 /* Dining Tab */
 .second_two{
-    height: 33vh;
-    width: 41vw;
+    height: 30vh;
+    width: 40vw;
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 20px;
@@ -283,6 +287,11 @@
     flex-direction: column;
     padding-bottom: 2vh;
     margin-right: 85px;
+}
+
+.second_two:hover{
+    height: 32vh;
+    width: 42vw;
 }
 
 .two_back{
