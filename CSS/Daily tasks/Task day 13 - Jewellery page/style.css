@@ -7,11 +7,14 @@
 /* Style for navbar */
 .navbar{
     background-color: white;
-    height: 30px;
+    height: 5vh;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 /* Text in navbar */
@@ -56,7 +59,7 @@
 
 /* Style for background image 1 */
 .background1{
-    height: 1000px;
+    height: 100vh;
     background-image: url(Jewll_images/img_1.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -310,6 +313,20 @@
     margin-bottom: 5px;
 }
 
+.left_quote{
+    font-size: 8vh;
+    position: absolute;
+    left: 10%;
+    top: 318%;
+}
+
+.right_quote{
+    font-size: 8vh;
+    position: absolute;
+    right: 10%;
+    top: 325%;
+}
+
 
 /* Footer */
 .foot{
@@ -322,4 +339,8 @@
 .contact_us{
     font-weight: bold;
     color: #ca804b;
+}
+
+.contact_us:hover{
+    text-decoration: underline;
 }
