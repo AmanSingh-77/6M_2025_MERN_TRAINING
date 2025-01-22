@@ -364,16 +364,20 @@
 
 
     .navbar{
-        width: 120vw;
+        width: 135vw;
     }
 
     .background1{
         background-repeat: no-repeat;
         background-size: 120vh 120vw;
         height: 100vh;
-        width: 120vw;
+        width: 135vw;
     }
 
+    .content1{
+        height: 210vh;
+        width: 135vw;
+    }
 
     .products{
         flex-wrap: wrap;
@@ -382,27 +386,18 @@
         align-items: center;
     }
 
-    .content1{
-        height: 210vh;
-        width: 120vw;
+    .background2{
+        width: 135vw;   
     }
 
     .content2{
         height: 150vh;
-        width: 120vw;
+        width: 135vw;
         padding-top: 6vh;
         flex-wrap: wrap;
         margin-bottom: -9vh;
-        width: 120vw;
-    }
-
-    .background2{
-        width: 120vw;
-       
-    }
-
-    .content3{
-        width: 120vw;
+        width: 135vw;
+        padding-left: 7vh;
     }
 
     #About{
@@ -433,6 +428,10 @@
         width: 30vw;
     }
 
+    .content3{
+        width: 135vw;
+    }
+
     .left_quote{
         position: absolute;
         top: 93%;
@@ -446,6 +445,6 @@
     }
 
     .foot{
-        width: 120vw;
+        width: 135vw;
     }
 }
