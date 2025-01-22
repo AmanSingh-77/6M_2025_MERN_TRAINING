@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: url(step-images/background.webp);
+    background-size: contain;
+    background-size: 100% 100%;
+    background-repeat: no-repeat ;
+}
+
+.container{
+    height: auto;
+    width: 120px;
+    position: relative;
+    left: 1%;
+    top: 50%;
+    animation: anim2 infinite 8s linear;
+}
+
+.man{
+    height: 250px;
+    width: 116px;
+    background-image: url(step-images/walk_pic.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: 960px;
+    position: relative;
+    top: 50%;
+    left: 5%;
+    animation: anim1 1s infinite steps(8);
+}
+
+.container2{
+    height: auto;
+    width: 120px;
+    position: relative;
+    transform: rotateY(180deg);
+    left: 1%;
+    top: 20%;
+    animation: anim2 infinite 8s linear reverse;
+}
+
+.woman{
+    height: 300px;
+    width: 90px;
+    background-image: url(step-images/walk_pic_2.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: 900px;
+    position: relative;
+    top: 50%;
+    left: 5%;
+    animation: anim3 1s infinite steps(8);
+}
+
+@keyframes anim1 {
+    from{
+        background-position: 10px;
+    }
+
+    to{
+        background-position: -1000px;
+    }
+}
+
+@keyframes anim2 {
+    from{
+        left: 10px;
+    }
+
+    to{
+        left: 93vw;
+    }
+}
+
+@keyframes anim3 {
+    from{
+        background-position: 0;
+    }
+
+    to{
+        background-position: -900px;
+    }
+}
