@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout using Bootstrap</title>
+    <link rel="stylesheet" href="bootstrap-files/css/bootstrap.min.css">
+
+    <style>
+        .small-boxes{
+            height: 10vh;
+        }
+
+        .main-content{
+            height: 30vh;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container mt-5 p-4 bg-light-subtle border border-dark text-light fs-2">
+        
+        <!-- Header -->
+        <div class="row mb-3 me-2">
+            <div class="col-md-9 pb-5 text-bg-danger">Header</div>
+        </div>
+
+        <!-- Small-boxes and main content -->
+        <div class="row">
+            <div class="col">
+
+                <!-- Small boxes -->
+                <div class="row mb-3">
+                    <div class="col pb-5 text-bg-danger me-3 small-boxes">Small Box</div>
+                    <div class="col pb-5 text-bg-danger me-3 small-boxes">Small Box</div>
+                    <div class="col pb-5 text-bg-danger me-3 small-boxes">Small Box</div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="row mb-3 ">
+                    <div class="col pb-5 me-3 text-bg-danger main-content">Main Content</div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-3 text-bg-danger mb-3">Sidebar</div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="col pb-5 text-bg-danger">Footer</div>
+        </div>
+    </div>
+
+    <script src="bootstrap-files/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
