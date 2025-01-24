@@ -23,10 +23,6 @@
     text-align: center;
 }
 
-.heading:hover{
-    text-shadow: 0 0 50px rgb(93, 0, 255);
-}
-
 .button{
     background-color: rgba(137, 43, 226, 0.5);
     margin-bottom: 100px;
