@@ -1,0 +1,69 @@
+*{
+    font-family: serif;
+}
+
+.plane{
+    color: var(--secondary-color);
+    text-shadow: 0 0 1vh var(--icons-color);
+    font-size: 5vh;
+}
+
+.plane:hover{
+    text-shadow: 0 0 3vh var(--secondary-color);
+}
+
+
+.tabs{
+    box-shadow: 0 0 2vh var(--shadows-color);
+    background-color: var(--secondary-color);
+    border: none;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
+    transition: height 0.5s;
+    height: 30vh;
+    color: white;
+    font-size: 3.5vh;
+    position: relative;
+    animation: anim1 1.2s 1 forwards;
+}
+
+.tabs:hover{
+    background-color: var(--primary-color);
+    transform: translate(1vh 1vh);
+    box-shadow: 0 0 3vh var(--entry-text-color);
+    height: 28vh;
+    font-size: 4vh;
+    color: black;
+}
+
+
+.current{
+    color: var(--secondary-color);
+}
+
+
+@keyframes anim1 {
+    from{
+        width: 25%;
+        left: 25%;
+
+    }
+
+    to{
+        width: 90%;
+        left: 0%;
+    }
+}
+
+
+@keyframes head {
+    from{
+        left: 90%;
+        
+    }
+
+    to{
+        left: 0%;
+        
+    }
+}

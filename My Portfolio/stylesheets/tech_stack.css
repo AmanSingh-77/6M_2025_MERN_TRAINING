@@ -1,0 +1,185 @@
+*{
+    font-family: serif;
+}
+
+.current{
+    color: var(--secondary-color);
+}
+
+.container-fluid{
+    opacity: 0;
+    animation: anim3 1.5s forwards;
+}
+
+.list-icon{
+    color: var(--icons-color);
+    font-size: 6vh;
+    position: relative;
+    animation: list-anim 2s forwards ;
+}
+
+.list-icon:hover{
+    box-shadow: 0 0 5vh var(--shadows-color);
+}
+
+.offcanvas-title{
+    color: var(--primary-color);
+}
+
+.offcanvas-body a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.offcanvas-header{
+    background-color: var(--secondary-color);
+}
+
+.offcanvas-body{
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+.offcanvas-body a:hover{
+    text-shadow: 0 0 1vh var(--shadows-color);
+}
+
+.current{
+    text-shadow: none !important;
+    color: gray;
+}
+
+.heading{
+    color: var(--primary-color);
+    position: relative;
+    animation: head-anim 1s forwards;
+}
+
+.tabs{
+    height: 20vh;
+    border: none;
+    position: relative;
+    opacity: 0;
+    animation: tabs-anim 2s forwards 1s;
+}
+
+.tabs:hover{
+    box-shadow: 0 0 3vh var(--shadows-color);
+}
+
+.tabs:hover span{
+    display: block;
+}
+
+.tabs span{
+    display: none;
+}
+
+
+.tab-1{
+    position: relative;
+    background-color: var(--secondary-color);
+    animation: tab-anim 0.8s forwards 1.4s;
+}
+
+.tab-2{
+    position: relative;
+    background-color: var(--primary-color);
+    animation: tab-anim 0.8s forwards 1.7s;
+}
+.tab-3{
+    position: relative;
+    background-color: var(--primary-color);
+    animation: tab-anim 0.8s forwards 2s;
+}
+.tab-4{
+    position: relative;
+    background-color: var(--secondary-color);
+    animation: tab-anim 0.8s forwards 2.3s;
+}
+.tab-5{
+    position: relative;
+    background-color: var(--secondary-color);
+    animation: tab-anim 0.8s forwards 2.6s;
+}
+.tab-6{
+    position: relative;
+    background-color: var(--primary-color);
+    animation: tab-anim 0.8s forwards 2.9s;
+}
+.tab-7{
+    position: relative;
+    background-color: var(--primary-color);
+    animation: tab-anim 0.8s forwards 3.2s;
+}
+.tab-8{
+    position: relative;
+    background-color: var(--secondary-color);
+    animation: tab-anim 0.8s forwards 3.5s;
+}
+
+
+@keyframes head {
+    from{
+        left: 90%;
+        
+    }
+
+    to{
+        left: 0%;
+        
+    }
+}
+
+@keyframes anim3 {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes list-anim {
+    from{
+        left: 100vw;
+    }
+
+    to{
+        left: 0;
+    }
+}
+
+@keyframes head-anim {
+    from{
+        top: -80%;
+    }
+
+    to{
+        top: 0%;
+    }
+}
+
+@keyframes tabs-anim {
+    from{
+        opacity: 0;;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
+@keyframes tab-anim {
+    from{
+        opacity: 0;
+        left: 90%;
+    }
+
+    to{
+        opacity: 1;
+        left: 0%;
+    }
+}

@@ -1,0 +1,161 @@
+*{
+    font-family: serif;
+}
+
+.container-fluid{
+    opacity: 0;
+    animation: anim3 1s forwards;
+}
+
+.current{
+    color: var(--secondary-color);
+}
+
+
+.list-icon{
+    color: var(--secondary-color);
+    font-size: 6vh;
+    position: relative;
+    animation: list-anim 2s forwards ;
+}
+
+.list-icon:hover{
+    box-shadow: 0 0 5vh var(--shadows-color);
+}
+
+.offcanvas-title{
+    color: var(--primary-color);
+}
+
+.offcanvas-body a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.offcanvas-header{
+    background-color: var(--secondary-color);
+}
+
+.offcanvas-body{
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+.offcanvas-body a:hover{
+    text-shadow: 0 0 1vh var(--shadows-color);
+}
+
+.current{
+    text-shadow: none !important;
+    color: gray;
+}
+
+.head{
+    color: var(--primary-color);
+    position: relative;
+    animation: head-anim 1s forwards;
+}
+
+.card-body{
+    background-color: var(--secondary-color);
+}
+
+.image{
+    border: solid 0.5vh var(--secondary-color);
+}
+
+.button{
+    background-color: var(--shadows-color);
+    border: none;
+   
+}
+
+.button:hover{
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 1vh var(--back-color);
+    color: white;
+}
+
+.card{
+    box-shadow: 0 0 1.5vh var(--shadows-color);
+}
+
+.icon{
+    color: var(--secondary-color);
+}
+
+.last{
+    background-color: rgb(252, 121, 121) ;
+    box-shadow: 0 0 1.5vh rgb(252, 121, 121);
+}
+
+.proj-1{
+    opacity: 0;
+    animation: tab-anim 1s forwards 1.3s;
+}
+.proj-2{
+    opacity: 0;
+    animation: tab-anim 1s forwards 1.6s;
+}
+.proj-3{
+    opacity: 0;
+    animation: tab-anim 1s forwards 1.9s;
+}
+.proj-4{
+    opacity: 0;
+    animation: tab-anim 1s forwards 2.2s;
+}
+
+
+
+@keyframes head {
+    from{
+        left: 90%;
+        
+    }
+
+    to{
+        left: 0%;
+        
+    }
+}
+
+@keyframes anim3 {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes list-anim {
+    from{
+        left: 100vw;
+    }
+
+    to{
+        left: 0;
+    }
+}
+
+@keyframes head-anim {
+    from{
+        top: -90%;
+    }
+
+    to{
+        top: 0%;
+    }
+}
+
+@keyframes tab-anim {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}

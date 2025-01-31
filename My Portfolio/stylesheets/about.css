@@ -1,0 +1,134 @@
+*{
+    font-family: serif;
+}
+
+.container-fluid{
+    opacity: 0;
+    animation: anim3 1s forwards;
+}
+
+.current{
+    color: var(--secondary-color);
+}
+
+.head{
+    color: var(--primary-color);
+    position: relative;
+    animation: head-anim 1s forwards;
+}
+
+.list-icon{
+    color: var(--icons-color);
+    font-size: 6vh;
+    position: relative;
+    animation: list-anim 2s forwards ;
+}
+
+.list-icon:hover{
+    box-shadow: 0 0 5vh var(--shadows-color);
+}
+
+.offcanvas-title{
+    color: var(--primary-color);
+}
+
+.offcanvas-body a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.offcanvas-header{
+    background-color: var(--secondary-color);
+}
+
+.offcanvas-body{
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+.offcanvas-body a:hover{
+    text-shadow: 0 0 1vh var(--shadows-color);
+}
+
+.current{
+    text-shadow: none !important;
+    color: gray;
+}
+
+.box{
+    box-shadow: 0 0 1vh var(--shadows-color);
+    color: var(--primary-color);
+    opacity: 0;
+    animation: anim1 2.5s forwards 1.5s;
+}
+
+span::selection{
+    background-color: var(--secondary-color);
+}
+
+strong::selection{
+    background-color: var(--secondary-color);
+}
+
+.icons{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.icons:hover{
+    color: var(--secondary-color);
+    text-shadow: 0 0 1vh var(--shadows-color);
+}
+
+
+@keyframes head {
+    from{
+        left: 90%;
+        
+    }
+
+    to{
+        left: 0%;
+        
+    }
+}
+
+@keyframes anim1 {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes anim3 {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes list-anim {
+    from{
+        left: 100vw;
+    }
+
+    to{
+        left: 0;
+    }
+}
+
+@keyframes head-anim {
+    from{
+        top: -80%;
+    }
+
+    to{
+        top: 0%;
+    }
+}

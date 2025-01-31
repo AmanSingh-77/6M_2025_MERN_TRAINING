@@ -1,0 +1,140 @@
+*{
+    font-family: serif;
+}
+
+.current{
+    color: var(--secondary-color);
+}
+
+.container{
+    opacity: 0;
+    animation: anim3 1s forwards;
+}
+
+.list-icon{
+    color: var(--secondary-color);
+    font-size: 6vh;
+    position: relative;
+    animation: list-anim 2s forwards ;
+}
+
+.list-icon:hover{
+    box-shadow: 0 0 3vh var(--shadows-color);
+}
+
+.offcanvas-title{
+    color: var(--primary-color);
+}
+
+.offcanvas-body a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.offcanvas-header{
+    background-color: var(--secondary-color);
+}
+
+.offcanvas-body{
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+.offcanvas-body a:hover{
+    text-shadow: 0 0 1vh var(--shadows-color);
+}
+
+
+.current{
+    text-shadow: none !important;
+    color: gray;
+}
+
+
+.head{
+    color: var(--primary-color);
+    padding-right: 2vh;
+    animation: anim2 1s forwards ;
+}
+
+.name{
+    color: white;
+    font-size: 150%;
+    background-color: var(--secondary-color);
+    border: none;
+    box-shadow: 0 0 2vh var(--icons-color);
+    animation: Name 2s forwards 1s;
+}
+
+
+.name-input{
+    outline: none;
+    box-shadow: 0 0 1vh var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.sub-btn{
+    transition: background-color 0.5s;
+    position: relative;
+    animation: btn-anim 1s forwards 0.1s;
+}
+
+.sub-btn:hover{
+    padding: 5% 11%;
+    outline: solid var(--primary-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 6vh var(--shadows-color);
+}
+
+
+@keyframes head {
+    from{
+        left: 90%;
+        
+    }
+
+    to{
+        left: 0%;
+        
+    }
+}
+
+@keyframes anim2 {
+    from{
+        font-size: 10%;
+    }
+
+    to{
+        font-size: 400%;
+    }
+}
+
+@keyframes anim3 {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes list-anim {
+    from{
+        left: 100vw;
+    }
+
+    to{
+        left: 0;
+    }
+}
+
+@keyframes btn-anim {
+    from{
+        top: 140%;
+    }
+
+    to{
+        top: 0%;
+    }
+}
