@@ -2253,7 +2253,7 @@ let data={
 
 //Using for loop
 for(var i=0;i<data.SECTION_SEARCH_RESULT.length;i++){
-    console.log(data.SECTION_SEARCH_RESULT[i].info.name, "  | ", data.SECTION_SEARCH_RESULT[i].info.rating.aggregate_rating, " | ",data.SECTION_SEARCH_RESULT[i].info.cfo.text , "  | ", data.SECTION_SEARCH_RESULT[i].distance);  
+    console.log(data.SECTION_SEARCH_RESULT[i].info.name, "  | ", data.SECTION_SEARCH_RESULT[i].info.rating.rating_text, " | ",data.SECTION_SEARCH_RESULT[i].info.cfo.text , "  | ", data.SECTION_SEARCH_RESULT[i].distance);  
 }
 console.log("----------------------------------------------------------------------------");
 
@@ -2262,7 +2262,7 @@ console.log("-------------------------------------------------------------------
 
 //Using for in loop
 for(items in data.SECTION_SEARCH_RESULT){
-   console.log(data.SECTION_SEARCH_RESULT[items].info.name, "  | ", data.SECTION_SEARCH_RESULT[items].info.rating.aggregate_rating, " | ",data.SECTION_SEARCH_RESULT[items].info.cfo.text , "  | ", data.SECTION_SEARCH_RESULT[items].distance);
+   console.log(data.SECTION_SEARCH_RESULT[items].info.name, "  | ", data.SECTION_SEARCH_RESULT[items].info.rating.rating_text, " | ",data.SECTION_SEARCH_RESULT[items].info.cfo.text , "  | ", data.SECTION_SEARCH_RESULT[items].distance);
    
 }
 console.log("-----------------------------------------------------------------------------");
@@ -2272,6 +2272,6 @@ console.log("-------------------------------------------------------------------
 
 //Using for of loop
 for(items of data.SECTION_SEARCH_RESULT){
-    console.log(items.info.name, "  | ", items.info.rating.aggregate_rating, " | ",items.info.cfo.text , "  | ", items.distance);
+    console.log(items.info.name, "  | ", items.info.rating.rating_text, " | ",items.info.cfo.text , "  | ", items.distance);
    
 }
