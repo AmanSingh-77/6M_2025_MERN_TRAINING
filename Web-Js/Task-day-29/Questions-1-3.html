@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions - 1/3</title>
+    <link rel="stylesheet" href="Styling/Questions-1-3.css">
+</head>
+
+<body>
+
+    <!-- Question-1 - Calculator -->   
+    <div class="div1">
+        <h1>CALCULATOR TO ADD TWO VALUES</h1>
+        <button onclick="add()">Add No.s</button> <br><br>
+        <h2 class="R1">RESULT :</h2>
+
+        <div class="result1">
+            <h2 id="output"></h2>
+        </div>
+    </div>
+    
+    
+    <!-- Question-2 - GST -->
+     <div class="div2">
+        <h1>GST CALCULATOR</h1>
+        <button onclick="gst()">Calculate GST</button> <br><br>
+        
+        <h2 class="gst-head">Amount :</h2>
+        <div class="result2">
+            <h2 id="amount-out"></h2>
+        </div>
+        
+        <h2 class="gst-head">GST :</h2>
+        <div class="result2">
+            <h2 id="gst-out"></h2>
+        </div>
+        
+        <h2 class="gst-head">Total :</h2>
+        <div class="result2">
+            <h2 id="total-out"></h2>
+        </div>
+     </div>
+
+
+
+    <script>
+
+        // Function for ques 1
+        function add(){
+           let a = prompt("Enter Value 1")  
+           let b = prompt("Enter Value 2")
+           let c = parseInt(a)+parseInt(b)
+           console.log(c);
+           document.getElementById("output").innerHTML= a + " + " + b +" = "+ c
+        }
+
+        
+        // Function for ques 2
+        function gst(){
+            let a = prompt("Enter the amount")
+            document.getElementById("amount-out").innerHTML="&#8377;"+a
+            console.log("amount - "+a);
+            
+
+            var gst = (a*18/100)
+            document.getElementById("gst-out").innerHTML= "&#8377;" + gst
+            console.log("gst - "+gst);
+
+            document.getElementById("total-out").innerHTML= "&#8377;" +( parseFloat(a) + parseFloat(gst))
+            console.log("Total - "+ (parseFloat(a) + parseFloat(gst)));
+        }
+
+    </script>
+</body>
+</html>
