@@ -19,10 +19,6 @@
 
                 <div id="clock-div">
                     <span class="fw-bold" id="day"></span>       
-                    <span class="fw-bold" id="month"></span>
-                    <span class="fw-bold" id="date"></span>
-                    <span class="fw-bold" id="full-time"></span>
-                    <span class="fw-bold" id="end"></span>
 
                     <h2 class="head-2 pt-3" id="hour"></h2>
                     <h2 class="head-2 ps-4" id="minute"></h2>
@@ -36,27 +32,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    
     <script>
-
-        let days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
-        let months= ["Jan", "Feb", "Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 
         function clock(){
             setInterval(()=>{
                 let time = new Date()
 
-                let d =  time.getDay()
-                let mon = time.getMonth()
-                let dt = time.getDate()
                 let h = time.getHours()
                 let m = time.getMinutes()
                 let s = time.getSeconds()
                 
-                document.getElementById("day").innerHTML = days[d] 
-                document.getElementById("month").innerHTML = months[mon] 
-                document.getElementById("date").innerHTML = dt 
-                document.getElementById("full-time").innerHTML = h + ":" + m + ":" + s
-                document.getElementById("end").innerHTML = "GMT+0530(India Standard Time)"
+                document.getElementById("day").innerHTML = time     
 
                 document.getElementById("hour").innerHTML = h + " : Hours  "
                 document.getElementById("minute").innerHTML = m + " : Minutes"
