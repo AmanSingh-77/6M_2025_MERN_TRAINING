@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1 CUSTOM DIV</title>
+    <style>
+
+        #sub{
+            padding: 2vh;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 15px;
+        }
+
+        input{
+            height: 4vh;
+            width: 30vh;
+            text-align: center;
+            outline: none;
+            border: none;
+        }
+
+        .div1{
+            padding-top: 2vh;
+            padding-bottom: 2vh; 
+            font-size: 3vh; 
+            text-align: center; 
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Custom Div</h1>
+
+    <!-- Input from Users -->
+    <div class="div1">
+        <label>Enter Text Color : </label><br>
+        <input id="col">
+        <br><br>
+        <label>Enter Background Color : </label><br>
+        <input id="bg">
+        <br><br>
+        <label>Enter Height : </label><br>
+        <input id="h">
+        <br><br>
+        <label>Enter Width : </label><br>
+        <input id="w">
+        <br><br>
+        <label>Enter Text  : </label><br>
+        <input id="text">
+        <br><br>
+        <button id="sub" onclick="create()">Create</button>
+    </div>
+
+    <!-- Custom Div -->
+    <div id="newDiv" style="font-size: 8vh; margin: auto; margin-top: 2vh;"></div>
+
+
+    <script>
+
+        function create(){
+            var color =   document.getElementById("col").value
+            var bgColor = document.getElementById("bg").value
+            var ht =      parseInt(document.getElementById("h").value)
+            var wd =      parseInt(document.getElementById("w").value)
+            var txt =     document.getElementById("text").value
+            
+            document.getElementById("newDiv").style.backgroundColor = bgColor
+            document.getElementById("newDiv").style.color = color
+            document.getElementById("newDiv").style.height = ht + "px"
+            document.getElementById("newDiv").style.width = wd  + "px"
+            document.getElementById("newDiv").innerHTML = txt  
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2 BMI CALCULATOR</title>
+
+    <style>
+        body{
+           background: linear-gradient(to left, royalblue ,rgb(204, 227, 248));
+        }
+
+        h1{
+            text-align: center;
+            font-size: 9vh;
+            color: white;
+        }
+
+        h2{
+            color: blue;
+        }
+
+        div{
+            text-align: center;
+        }
+
+        .div1{
+            height: 10vh;
+            width: 20vh; 
+            background-color: rgb(123, 178, 254); 
+            box-shadow: 0 0 1.5vh gray; 
+            border-radius: 10px; 
+            padding: 0.8vh; 
+            margin: auto; 
+            color: white; 
+            margin-top: 3vh;
+        }
+
+        button{
+            padding: 2vh; 
+            border:none;
+            border-radius: 10px; 
+            background-color: blue; 
+            color: white;
+        }
+
+        input{
+            height: 3.5vh;
+            margin-top: 5px;
+            text-align: center;
+            outline: none;
+            border: none;
+        }
+
+        label{
+            font-size: 3vh;
+        }
+
+        span{
+            font-size: 2.5vh;
+            font-weight: bold;
+            color: black;
+        }
+
+       
+
+        .help{
+            color: white;
+            font-size: 2vh; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>BMI CALCULATOR</h1>
+
+    <!-- Inputs -->
+    <div>
+        <label>Enter Your Height (in m)</label><br>
+        <input id="height">
+        <br><br>
+
+        <label>Enter Your weight (in kg)</label><br>
+        <input id="weight">
+        <br><br>
+
+        <button type="button" id="calc" onclick="bmi()">Calculate</button>
+    </div>
+
+    <!-- Outputs -->
+    <div>
+        <div class="div1">
+            <span>YOUR BMI</span>
+            <h2 id="result"></h2>
+        </div>
+        
+        <div class="div1" style="width: 27vh; margin-bottom: 2vh;">
+            <span>CATEGORY</span>
+            <h2 id="cat"></h2>
+        </div>
+
+        <span class="help">Need help with height units ? <a target="_blank" href="https://www.thecalculatorsite.com/conversions/common/height-converter.php">Click here</a></span>
+    </div>
+
+    <script>
+        function bmi(){
+            var a = parseFloat(document.getElementById("height").value)
+            var b = parseFloat(document.getElementById("weight").value)
+
+            var output = (b/(a*a)).toFixed(1)
+
+            if(output < 18.5) {
+                category = 'Underweight';
+            } else if (output >= 18.5 && output < 24.9) {
+                category = 'Normal weight';
+            } else if (output >= 25 && output < 29.9) {
+                category = 'Overweight';
+            } else {
+                category = 'Obesity';
+            }
+
+            document.getElementById("result").innerHTML = output
+            document.getElementById("cat").innerHTML = category
+            
+            
+            if(category == 'Underweight') {
+                document.getElementById("cat").style.color = "purple"
+            } else if (category == 'Normal weight') {
+                document.getElementById("cat").style.color= "green"
+            } else if (category == 'Overweight') {
+                document.getElementById("cat").style.color= "gold"
+            } else {
+                document.getElementById("cat").style.color= "red"
+            }
+            
+        }
+    </script>
+</body>
+</html>

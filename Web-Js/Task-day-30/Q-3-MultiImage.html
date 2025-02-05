@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-3 Multi Image</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+
+        body{
+            background: black;
+        }
+
+        .container{
+            
+            width: 90vw;
+            border-radius: 20px;
+            margin: auto;
+            background: linear-gradient(to left, #5c0900,#1f1c18);
+            padding: 2vh;
+            padding-bottom: 5vh;
+            margin-top: 5vh;
+            box-shadow: 0 0 2vh rgb(119, 0, 0);
+        }
+
+        img{
+            border: 0.3vh solid black;
+            border-radius: 20px;
+        }
+
+        .imgs:hover{
+            box-shadow: 0 0 1vh red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Main container -->
+    <div class="container">
+        
+        <!-- Row for main image -->
+        <div class="row justify-content-center pt-4">
+            <div class="col-3">
+                <img id="main-img" class="img-fluid" src="Q3-images/mainImg.png">
+            </div>
+        </div>
+
+        <!-- Row 1 for images -->
+        <div class="row pt-5">
+            <div class="col-3">
+                <img onmouseover="change(src)" onmouseout="change2()" class="img-fluid imgs" src="Q3-images/img2.jpg">
+            </div>
+            <div class="col-3">
+                <img onmouseover="change(src)" onmouseout="change2()" class="img-fluid imgs" src="Q3-images/img3.png">
+            </div>
+            <div class="col-3">
+                <img onmouseover="change(src)" onmouseout="change2()" class="img-fluid imgs" src="Q3-images/img4.jpg">
+            </div>
+            <div class="col-3">
+                <img onmouseover="change(src)" onmouseout="change2()" class="img-fluid imgs" src="Q3-images/img1.jpg">
+            </div>
+
+        </div>
+
+        <!-- Row 2 for images -->
+        <div class="row pt-3">
+            <div class="col-3">
+                <img onmouseover="change(src)" onmouseout="change2()" class="img-fluid imgs" src="Q3-images/img5.jpg">
+            </div>
+            <div class="col-3">
+                <img onmouseover="change(src)" onmouseout="change2()" class="img-fluid imgs" src="Q3-images/img6.jpg">
+            </div>
+            <div class="col-3">
+                <img onmouseover="change(src)" onmouseout="change2()" class="img-fluid imgs" src="Q3-images/img7.jpg">
+            </div>
+            <div class="col-3">
+                <img onmouseover="change(src)" onmouseout="change2()" class="img-fluid imgs" src="Q3-images/img8.jpg">
+        </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        function change(x){
+            document.getElementById("main-img").src=x
+        }
+
+        function change2(){
+            document.getElementById("main-img").src="Q3-images/mainImg.png"
+        }
+    </script>
+</body>
+</html>
