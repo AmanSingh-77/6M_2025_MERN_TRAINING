@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+        label{
+            font-size: 2.5vh;
+        }
+
+        input{
+            font-size: 2.5vh;
+            text-align: center;
+            margin-top: 0.5vh;
+            outline: none;
+            border: none;
+        }
+
+        button{
+            height: 5vh;
+            width: 15vh;
+            font-size: 2vh;
+            display: block;
+            margin: auto;
+            background-color: red;
+            border-radius: 10px;
+            border: none;
+            color: white;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 7vh;
+            color: red;
+        }
+
+        body{
+            background-color: lightgreen;
+        }
+
+        #result{
+            margin-top: 2vh; 
+            font-size: 4vh; 
+            text-align: center;
+            background-color: rgb(255, 0, 0,0.6);
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Create Custom Table</h1>
+
+    <!-- Div1 for inputs -->
+    <div style="display: flex; flex-direction: column; width: 200px; margin: auto;">  
+        <label>Enter the number</label>
+        <input id="num"><br>
+        <label>Enter the starting point</label>
+        <input id="start"><br>
+        <label>Enter the ending point</label>
+        <input id="end"><br><br>
+        <button id="create" onclick="createTable()">Create</button>    
+    </div>
+
+    <!-- Div2 for output -->
+    <div id="result"></div>
+
+    <script src="scripts/Table.js"></script>
+</body>
+</html>

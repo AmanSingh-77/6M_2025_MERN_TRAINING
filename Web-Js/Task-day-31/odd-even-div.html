@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background-color: whitesmoke;
+        }
+
+        .inputDiv{
+            text-align: center;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        button{
+            padding: 1.8vh;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+
+        label{
+            font-size: 3vh;
+        }
+    
+        input{
+            font-size: 3vh;
+            text-align: center;
+            outline: none;
+            margin-top: 1vh;
+            padding: 0.5vh;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>ODD EVEN DIVS</h1>
+
+    <!-- Div1 for input -->
+    <div class="inputDiv">
+        <label>Enter the number</label><br>
+        <input id="num">
+        <br><br>
+        <button id="create" onclick="createDivs()">CREATE</button>
+    </div>
+
+    <!-- Div2 for output -->
+    <div id="output"></div>
+    
+    <script src="scripts/div.js"></script>
+</body>
+</html>
