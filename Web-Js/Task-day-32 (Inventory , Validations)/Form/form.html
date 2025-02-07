@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+
+        body{
+            background-color: whitesmoke;
+        }
+
+       form{
+        text-align: center;
+        font-size: 3vh;
+       }
+
+       h1{
+        text-align: center;
+       }
+
+       #email{
+        margin-left: 4.5vh;
+       }
+       
+       label{
+        margin-right: 1vh;
+       }
+
+       input{
+        padding: 0.5vh;
+       }
+
+       button{
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 1.5vh 2vh;
+        margin-top: 1vh;
+       }
+
+       #error{
+        color: red;
+        font-size: 1.8vh;
+       }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>LOGIN FORM</h1><br><br>
+
+        <form action="submit.html"  onsubmit="return submitForm()">
+            
+            <label>E-MAIL : </label>
+            <input id="email">
+            <br><br>
+
+            <label>PASSWORD:</label>
+            <input id="password">
+            <br><br>
+
+            <span id="error"></span><br>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+
+    <script>
+        function submitForm(){
+            var email = document.getElementById("email").value
+            var pass = document.getElementById("password").value
+
+            var setEmail = "aman@gmail.com"
+            var passWord = "2025"
+
+            if(email.trim()!=setEmail || pass.trim()!=passWord){
+                document.getElementById("error").innerHTML = "Values do not match"
+                return false
+            }
+        }
+    </script>
+</body>
+</html>

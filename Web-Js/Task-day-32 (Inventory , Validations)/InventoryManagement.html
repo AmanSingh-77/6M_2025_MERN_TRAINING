@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+
+    <style>
+
+        *{
+            font-family: monospace;
+        }
+
+        body{background-color: whitesmoke;}
+
+        div{
+            text-align: center;
+            font-size: 4vh;
+            padding-top: 2vh;
+        }
+
+        input{
+            padding: 1vh;
+        }
+
+        button{
+            padding: 1.4vh 1.8vh;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+
+        #result{
+            margin-top: 2vh;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <!-- Div1 for input -->
+    <div>
+        <label>Enter Products:</label>
+        <input id="product">
+        <button onclick="add()">ADD</button>
+        <br><br>
+        <button onclick="show()">SHOW</button>
+    </div>  
+
+    <hr style="width: 100%; margin-top: 5vh;">
+
+    <!-- Div2 for result -->
+    <div id="result"></div>
+
+
+
+    <script>  
+        var arr = []
+
+        // function to add items
+        function add(){
+            var inp = document.getElementById("product").value
+            arr.push(inp)
+            document.getElementById("product").value = ""
+        }
+
+        // Function to display items
+        function show(){
+            for(items of arr){
+                document.getElementById("result").innerHTML+= items + "<br>"
+            }
+        }
+    </script>
+</body>
+</html>
