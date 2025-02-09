@@ -1,0 +1,71 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+.head-row {
+    background-color: gray;
+    text-align: center;
+    border-right: 2px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 3.3vh;
+}
+
+.box1, .box2, .box3{
+    border-right: 2px solid white;
+}
+
+#setItemList{
+    width: 25vh;
+    height: 4.5vh;
+}
+
+#setPrice{
+    width: 30vh;
+    height: 5.6vh;
+
+}
+
+button{
+    border: 3px solid black;
+}
+
+button:hover{
+    background-color: rgb(198, 198, 198);
+}
+
+
+table tr th{
+    border: 3px double black;
+    
+}
+
+#checkoutList{
+    margin-top: 3vh;
+    width: 30vh;
+    height: 4.8vh;
+}
+
+#quantity{
+    width: 8vh;
+}
+
+.numBut{
+    font-size: 2vh;
+    font-weight: 600;
+    padding: 1vh 9vh;
+    border-radius: 5px;
+}
+
+#recieptBox2{
+    display: none;
+}
+
+#recieptBox1{
+    display: flex;
+}
+
+
+
