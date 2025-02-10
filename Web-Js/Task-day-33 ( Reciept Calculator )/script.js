@@ -6,22 +6,30 @@ var finalList = []
 //Add Product Button
 function addProduct(){
     var newProduct = document.getElementById("newProduct").value
-    TempArr.push(newProduct)
-    document.getElementById("newProduct").value = "" 
-
-    for(i=0;i<TempArr.length;i++){
-        var item = TempArr[i]
-        arr2.push(item)
-
-        document.getElementById("setItemList").innerHTML += '<option>'+item+'<options>'
-
-        document.getElementById("addedMsg").innerHTML = `Product - ${item} Added in List`
-
+    
+    if(arr2.includes(newProduct)){
+        document.getElementById("addedMsg").innerHTML = "Data already exists"
         setTimeout(()=>{document.getElementById("addedMsg").innerHTML = ""},1000)
+    }
 
-        TempArr.pop()
+    else{
+        TempArr.push(newProduct)
+        document.getElementById("newProduct").value = "" 
+
+        for(i=0;i<TempArr.length;i++){
+            var item = TempArr[i]
+            arr2.push(item)
+
+            document.getElementById("setItemList").innerHTML += '<option>'+item+'<options>'
+
+            document.getElementById("addedMsg").innerHTML = `Product - ${item} Added in List`
+
+            setTimeout(()=>{document.getElementById("addedMsg").innerHTML = ""},1000)
+            TempArr.pop()
+        }
         
     }
+    
     
 }
 
