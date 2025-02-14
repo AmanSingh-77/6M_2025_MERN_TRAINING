@@ -4,8 +4,15 @@ count = 0
 // Add button
 function add(){
     var a = document.getElementById("input").value
-        
-    divs = document.createElement("div")   
+
+    if(a.trim()==""){
+        alert("Field cannot be empty")
+        document.getElementById("input").value = ""  
+    }
+
+    else{
+
+        divs = document.createElement("div")   
     document.getElementById('box').appendChild(divs)
     divs.id = count
     document.getElementById(`${divs.id}`).classList.add('row')
@@ -41,6 +48,10 @@ function add(){
 
     document.getElementById("input").value = ""    
 }
+
+    }
+        
+    
 
 // Edit Button
 function edit(id){
