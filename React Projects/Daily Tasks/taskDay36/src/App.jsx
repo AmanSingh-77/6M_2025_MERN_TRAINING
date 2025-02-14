@@ -14,8 +14,8 @@ function App() {
       <Employee/>
       <Employee/>
 
-      <Student/>
-      <Student/>
+      <Student sname = 'Amanpreet' dept = 'CSE' roll = '56' />
+      <Student sname = 'Shruti' dept = 'ENC' roll = '21'/>
     </>
   )
 }

@@ -1,4 +1,4 @@
-export default function Student(){
+export default function Student({sname,dept,roll}){
     return(
         <>
         <h1>Student Information</h1>
@@ -11,16 +11,12 @@ export default function Student(){
             </tr>
 
             <tr>
-                <td>Amanpreet Singh</td>
-                <td>CSE</td>
-                <td>56</td>
+                <td>{sname}</td>
+                <td>{dept}</td>
+                <td>{roll}</td>
             </tr>
          
-            <tr>
-                <td>Shruti</td>
-                <td>ENC</td>
-                <td>12</td>
-            </tr>
+            
         </table>
         <br/>
         </>
