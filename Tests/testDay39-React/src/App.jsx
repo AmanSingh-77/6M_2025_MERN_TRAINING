@@ -30,7 +30,7 @@ function App() {
     <>
       {/* Ques-1 */}
       <h1>Ques-1</h1>
-      <ProductDetails {...products} />
+      <ProductDetails products={products} />
       
       {/* Ques-2 */}
       <h1>Ques-2</h1>

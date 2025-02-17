@@ -1,6 +1,6 @@
-import TableRow from "./TableRow";
+import { Fragment } from "react"
 
-export default function ProductDetails(props){
+export default function ProductDetails({products}){
     return(
         
         
@@ -12,7 +12,23 @@ export default function ProductDetails(props){
                 <th>DESCRIPTION</th>
                 </tr> 
             </thead>
-            <TableRow {...props}/> 
+            
+            <tbody>
+                <>
+                {products.map((product,index)=>{
+                    return(
+                        <Fragment key={index}>
+                            <tr>
+                                <td>{product.pname}</td>
+                                <td>{product.price}</td>
+                                <td>{product.desc}</td>
+                            </tr>
+                        </Fragment>
+                    )  
+                })}
+                </>
+                
+            </tbody> 
                               
         </table>
         
