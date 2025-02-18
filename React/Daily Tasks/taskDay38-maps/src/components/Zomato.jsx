@@ -135,7 +135,7 @@ export default function Zomato(){
                         <hr/>
                         <h3>{el.info.name}</h3>
                         <h3>{el.info.rating.rating_text}</h3>
-                        <h3>{el.info.image.url}</h3>
+                        <img src={el.info.image.url} style={{height:'150px', width:'200px', border:'1px solid black', borderRadius:'10px', boxShadow:'0 0 5px gray'} }/>
                         <hr/>
                     </Fragment>
                 )
