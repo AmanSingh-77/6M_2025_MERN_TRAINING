@@ -6,7 +6,7 @@ var arr = ['Aman','Shruti','Sam','Ajay','Rohit']
 export default function Student(){
     return(
         <>
-        
+            <h1>STUDENTS</h1>
             {arr.map((el,index)=>{
                 return(
                     <Fragment key={index}>

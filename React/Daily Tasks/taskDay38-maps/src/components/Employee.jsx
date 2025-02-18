@@ -20,6 +20,7 @@ var employee = [
 export default function Employee(){
     return(
         <>
+            <h1>EMPLOYEE INFO</h1>
             {employee.map((el,index)=>{
                 return(
                     <div key={index} style={{height:'auto', width:'250px', backgroundColor:'Black',margin:'auto', marginBottom:'20px', display:'flex', flexDirection:'column', padding:'20px', color:'lightgreen', border:'3px solid green', borderRadius:'10px', fontSize:'18px'}}>

@@ -129,6 +129,7 @@ let data= [
 export default function Zomato(){
     return(
         <>
+        <h1>ZOMATO DATA</h1>
             {data.map((el,index)=>{
                 return(
                     <Fragment key={index}>
