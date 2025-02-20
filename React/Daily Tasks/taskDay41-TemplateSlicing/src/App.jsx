@@ -5,7 +5,7 @@ import Blog from './components/Blog'
 import Contact from './components/Contact'
 import Layout from './components/layouts/Layout';
 
-function App() {
+export default function App() {
   
 
   return (
@@ -20,5 +20,3 @@ function App() {
       </BrowserRouter>
   )
 }
-
-export default App

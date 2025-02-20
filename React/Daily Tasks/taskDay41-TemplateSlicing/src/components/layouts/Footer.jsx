@@ -1,3 +1,5 @@
+//Common footer page
+
 export default function Footer(){
   
     return(
