@@ -1,13 +1,11 @@
 import './App.css'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import About from './components/About'
 import Blog from './components/Blog'
 import Contact from './components/Contact'
 import Layout from './components/layouts/Layout';
 
 export default function App() {
-  
-
   return (
       <BrowserRouter>
         <Routes>
