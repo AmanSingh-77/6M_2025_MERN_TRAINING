@@ -17,7 +17,7 @@ export default function Header(){
                         <a href="#">Home</a>
                     </li>
                     <li className="dropdown">
-                        <Link to='/about' className="acive">About</Link>
+                        <Link to='/user/about' className="acive">About</Link>
                         <ul>
                         <li>
                             <a href="#">Team</a>
@@ -60,10 +60,10 @@ export default function Header(){
                         <a href="#">Pricing</a>
                     </li>
                     <li>
-                        <Link to='/blog'>Blog</Link>
+                        <Link to='/user/blog'>Blog</Link>
                     </li>
                     <li>
-                    <Link to='/contact'>Contact</Link>
+                    <Link to='/user/contact'>Contact</Link>
                     </li>
                     </ul>
                     <i className="mobile-nav-toggle d-xl-none bi bi-list" />
