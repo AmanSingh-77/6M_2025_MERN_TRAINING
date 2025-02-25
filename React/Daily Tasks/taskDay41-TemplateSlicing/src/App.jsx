@@ -9,6 +9,7 @@ import { ToastContainer} from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css"
 import Home from './components/User Pages/Home';
 import UserMaster from './components/User Layouts/UserMaster';
+import Admin from './components/Admin Pages/Admin';
 
 
 export default function App() {
@@ -28,6 +29,9 @@ export default function App() {
             <Route path='/user/contact' element={<Contact/>}/ >
           </Route>
 
+          {/* Admin Login */}
+          <Route path='/admin' element={<Admin/>} />
+          
         </Routes>
       </BrowserRouter>
 

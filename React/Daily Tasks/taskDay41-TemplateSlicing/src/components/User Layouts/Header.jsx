@@ -29,6 +29,10 @@ export default function Header(){
                     <Link to='/user/contact'>Contact</Link>
                     </li>
 
+                    <li>
+                    <Link to='/'>Log Out</Link>
+                    </li>
+
                     </ul>
                     <i className="mobile-nav-toggle d-xl-none bi bi-list" />
                 </nav>

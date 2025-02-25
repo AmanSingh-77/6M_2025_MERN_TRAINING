@@ -13,6 +13,10 @@ export default function Login(){
             nav('/user')
             toast.success('Login Successful')
         }
+        else if(email==='admin@trailsToTales.com' && pass==='admin'){
+            nav('/admin')
+            toast.success('Welcome Admin!')
+        }
         else{
             toast.error('Wrong Credentials')
         }
@@ -20,12 +24,12 @@ export default function Login(){
     }
     
     return(
-        <div className="container-fluid bg-success-subtle">
+            <div className="container-fluid ">
             <div className="row">
                 <div className="col-sm text-success">
                     <div className="d-flex align-items-center h-custom-2 px-5  mt-5 pt-5 pt-xl-0 mt-xl-n5">
                         <form onSubmit={submitForm} style={{ width: "23rem" }}>
-                            <h1 className=" mb-3 pb-3 text-success">Log in</h1>
+                            <h1 className="fw-bolder mb-3 pb-3 text-success">Log In</h1>
 
                             {/* Email */}
                             <div className="form-outline mb-4">
@@ -53,6 +57,6 @@ export default function Login(){
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
     )
 }
