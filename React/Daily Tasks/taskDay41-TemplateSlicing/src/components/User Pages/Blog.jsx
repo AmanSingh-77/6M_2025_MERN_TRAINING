@@ -1,22 +1,12 @@
+import PageTitile from "../User Layouts/PageTitle";
+
 export default function Blog(){
     return(
         <div className="blog-page">
           <main className="main">
-            {/* Page Title */}
-            <div className="page-title accent-background">
-              <div className="container d-lg-flex justify-content-between align-items-center">
-                <h1 className="mb-2 mb-lg-0">Blog</h1>
-                <nav className="breadcrumbs">
-                  <ol>
-                    <li>
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li className="current">Blog</li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-            {/* End Page Title */}
+            
+            <PageTitile current='Blog'/>
+
             {/* Blog Posts Section */}
             <section id="blog-posts" className="blog-posts section">
               <div className="container">
@@ -53,7 +43,7 @@ export default function Blog(){
                           nostrum quidem aliquid dicta.
                         </p>
                         <hr />
-                        <a href="blog-details.html" className="readmore stretched-link">
+                        <a href="#" className="readmore stretched-link">
                           <span>Read More</span>
                           <i className="bi bi-arrow-right" />
                         </a>
@@ -92,7 +82,7 @@ export default function Blog(){
                           pariatur nam.
                         </p>
                         <hr />
-                        <a href="blog-details.html" className="readmore stretched-link">
+                        <a href="#" className="readmore stretched-link">
                           <span>Read More</span>
                           <i className="bi bi-arrow-right" />
                         </a>
@@ -132,7 +122,7 @@ export default function Blog(){
                           fugiat voluptate enim tenetur sunt omnis.
                         </p>
                         <hr />
-                        <a href="blog-details.html" className="readmore stretched-link">
+                        <a href="#" className="readmore stretched-link">
                           <span>Read More</span>
                           <i className="bi bi-arrow-right" />
                         </a>
@@ -172,7 +162,7 @@ export default function Blog(){
                           atque cum eligendi eaque iste omnis a qui.
                         </p>
                         <hr />
-                        <a href="blog-details.html" className="readmore stretched-link">
+                        <a href="#" className="readmore stretched-link">
                           <span>Read More</span>
                           <i className="bi bi-arrow-right" />
                         </a>
@@ -212,7 +202,7 @@ export default function Blog(){
                           corrupti autem consequuntur totam dolorem.
                         </p>
                         <hr />
-                        <a href="blog-details.html" className="readmore stretched-link">
+                        <a href="#" className="readmore stretched-link">
                           <span>Read More</span>
                           <i className="bi bi-arrow-right" />
                         </a>
@@ -253,7 +243,7 @@ export default function Blog(){
                           Omnis dolores sit.
                         </p>
                         <hr />
-                        <a href="blog-details.html" className="readmore stretched-link">
+                        <a href="#" className="readmore stretched-link">
                           <span>Read More</span>
                           <i className="bi bi-arrow-right" />
                         </a>

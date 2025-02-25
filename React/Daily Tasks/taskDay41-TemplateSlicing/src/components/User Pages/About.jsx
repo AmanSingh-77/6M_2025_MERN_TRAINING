@@ -1,23 +1,12 @@
+import PageTitile from "../User Layouts/PageTitle";
+
 export default function About(){
     return(
         <div className="about-page">      
             <main className="main">
-                {/* Page Title */}
-                <div className="page-title accent-background">
-                <div className="container d-lg-flex justify-content-between align-items-center">
-                    <h1 className="mb-2 mb-lg-0">About</h1>
-                    <nav className="breadcrumbs">
-                    <ol>
-                        <li>
-                        <a href="#">Home</a>
-                        </li>
-                        <li className="current">About</li>
-                    </ol>
-                    </nav>
-                </div>
-                </div>
-                {/* End Page Title */}
-                {/* About Section */}
+                
+                <PageTitile current = 'About'/>
+                
                 <section id="about" className="about section">
                 <div className="container">
                     <div className="row position-relative">

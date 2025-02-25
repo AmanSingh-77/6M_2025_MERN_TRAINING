@@ -1,28 +1,31 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { toast } from 'react-toastify';
 
 export default function Login(){
     var[email,setEmail] = useState()
     var[pass,setPass] = useState()
     var nav = useNavigate()
     
-    function submitForm(){
-        if(email==='user@gmail.com' && pass==='123') {
+    function submitForm(e){
+        e.preventDefault()
+        if(email==='aman@gmail.com' && pass==='123') {
             nav('/user')
+            toast.success('Login Successful')
         }
         else{
-            alert('wrong credentials')
+            toast.error('Wrong Credentials')
         }
-        e.preventDefault
+        
     }
     
     return(
-        <div className="container-fluid">
+        <div className="container-fluid bg-success-subtle">
             <div className="row">
-                <div className="col-sm text-black">
-                    <div className="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                <div className="col-sm text-success">
+                    <div className="d-flex align-items-center h-custom-2 px-5  mt-5 pt-5 pt-xl-0 mt-xl-n5">
                         <form onSubmit={submitForm} style={{ width: "23rem" }}>
-                            <h1 className=" mb-3 pb-3">Log in</h1>
+                            <h1 className=" mb-3 pb-3 text-success">Log in</h1>
 
                             {/* Email */}
                             <div className="form-outline mb-4">
@@ -43,7 +46,7 @@ export default function Login(){
 
                             {/* Login Button */}
                             <div className="pt-1 mb-4">
-                            <button className="btn btn-info btn-lg btn-block" type="submit">Login</button>
+                            <button className="btn btn-outline-success btn-lg btn-block" type="submit">Login</button>
                             </div>
 
                         </form>

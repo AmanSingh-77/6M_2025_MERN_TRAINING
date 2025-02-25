@@ -1,22 +1,11 @@
+import PageTitile from "../User Layouts/PageTitle";
+
 export default function Contact(){
     return(
         <div className="contact-page">
           <main className="main">
-            {/* Page Title */}
-            <div className="page-title accent-background">
-              <div className="container d-lg-flex justify-content-between align-items-center">
-                <h1 className="mb-2 mb-lg-0">Contact</h1>
-                <nav className="breadcrumbs">
-                  <ol>
-                    <li>
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li className="current">Contact</li>
-                  </ol>
-                </nav>
-              </div>
-            </div>
-            {/* End Page Title */}
+            <PageTitile current='Contact'/>
+
             {/* Contact Section */}
             <section id="contact" className="contact section">
               <div className="mb-5">
