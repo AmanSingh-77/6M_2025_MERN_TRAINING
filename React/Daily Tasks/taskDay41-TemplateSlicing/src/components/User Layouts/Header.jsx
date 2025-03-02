@@ -1,6 +1,6 @@
 //Common header page 
 
-import { Link, useSearchParams } from "react-router-dom"
+import { Link} from "react-router-dom"
 import Modal from 'react-modal'
 import LogOutConfirm from "../User Pages/LogOutConfirm";
 import { useState } from "react";
@@ -20,7 +20,8 @@ export default function Header(){
         },
       };
       var [isOpen,setIsOpen]=useState(false)
-    return(
+   
+      return(
 
         <>  
              <header id="header" className="header d-flex align-items-center sticky-top">
