@@ -1,20 +1,20 @@
-const categoryModel = require('./categoryModel')
+const brandModel = require('./brandModel')
 
 add=(req,res)=>{
     // obj for accessing the schema
-    let categoryObj = new categoryModel()
+    let brandObj = new brandModel()
 
     // adding the values from queries
-    categoryObj.categoryName = req.query.categoryName
-    categoryObj.categoryDesc = req.query.categoryDesc
-    categoryObj.save()
+    brandObj.brandName = req.query.brandName
+    brandObj.brandDesc = req.query.brandDesc
+    brandObj.save()
 
-    .then((categryData)=>{
+    .then((brandData)=>{
         res.json({
             status:200,
             success:true,
-            message:"Category created",
-            data:categryData
+            message:"Brand added",
+            data:brandData
         })
     })
 
@@ -30,12 +30,12 @@ add=(req,res)=>{
 }
 
 all=(req,res)=>{
-    console.log('Category All function is running');
+    console.log('brand All function is running');
 
     res.json({
         status:200,
         success:true,
-        message:"Category all api is connected"
+        message:"brand all api is connected"
     })
 }
 

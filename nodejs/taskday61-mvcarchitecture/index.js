@@ -16,14 +16,6 @@ app.get('/',(req,res)=>{
     })
 })
 
-// error api
-app.get('/**',(req,res)=>{
-    res.status(404).json({
-        status:404,
-        success:false,
-        message:"Error"
-    })
-})
 
 // for using product and category api's
 const api = require('./Server/routes/apiRoutes')
