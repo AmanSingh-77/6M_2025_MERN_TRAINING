@@ -29,14 +29,30 @@ add=(req,res)=>{
 
 }
 
-all=(req,res)=>{
-    console.log('Category All function is running');
+all= async(req,res)=>{
+    try{
+        const result = await categoryModel.find()
 
-    res.json({
-        status:200,
-        success:true,
-        message:"Category all api is connected"
-    })
+        console.log("Category Data fetched");
+        
+
+        res.json({
+            status:200,
+            success:true,
+            message:"Category Data fetched",
+            data:result
+        })
+    }
+    catch{
+        res.json({
+            status:500,
+            success:false,
+            message:"Internal server error",
+            error:err
+        })
+    }
+
+    
 }
 
 module.exports = {add,all}

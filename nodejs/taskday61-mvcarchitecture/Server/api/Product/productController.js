@@ -30,13 +30,28 @@ add=(req,res)=>{
     })
 }
 
-all=(req,res)=>{
-    console.log('Product all function is running');
+all= async(req,res)=>{
+    try{
+        const result = await productModel.find()
+        
+        console.log("Product Data fetched");
+        
 
-    res.json({
-        status:200,
-        success:true,
-        message:'Product all api is connected'
-    })
+        res.json({
+            status:200,
+            success:true,
+            message:"Product Data fetched",
+            data:result
+        })
+    }
+    catch{
+        res.json({
+            status:500,
+            success:false,
+            message:"Internal server error",
+            error:err
+        })
+    }
 }
+
 module.exports={add,all}
