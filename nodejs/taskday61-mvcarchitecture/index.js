@@ -16,6 +16,9 @@ app.get('/',(req,res)=>{
     })
 })
 
+app.use(express.urlencoded({extended:true}))
+app.use(express.json({limit:"40mb"}))
+
 
 // for using product and category api's
 const api = require('./Server/routes/apiRoutes')

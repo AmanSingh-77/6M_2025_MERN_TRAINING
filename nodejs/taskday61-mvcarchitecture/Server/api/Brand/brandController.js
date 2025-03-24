@@ -1,56 +1,119 @@
 const brandModel = require('./brandModel')
 
-add=(req,res)=>{
-    // obj for accessing the schema
-    let brandObj = new brandModel()
+add= async (req,res)=>{
+    validation =""
+    
+    if(!req.body.brandName){
+        validation += "Name is required"
+    }
+    if(!req.body.brandDesc){
+        validation += "Description is required"
+    }
 
-    // adding the values from queries
-    brandObj.brandName = req.query.brandName
-    brandObj.brandDesc = req.query.brandDesc
-    brandObj.save()
-
+    if(!validation.trim()){
+        // To check duplicates
+    await brandModel.findOne({brandName:req.body.brandName})
+    
     .then((brandData)=>{
-        res.json({
-            status:200,
-            success:true,
-            message:"Brand added",
-            data:brandData
-        })
+        if(!brandData){
+            // obj for accessing the schema
+            let brandObj = new brandModel()
+
+            // adding the values from queries
+            brandObj.brandName = req.body.brandName
+            brandObj.brandDesc = req.body.brandDesc
+            brandObj.save()
+
+            .then((categryData)=>{
+                res.json({
+                    status:200,
+                    success:true,
+                    message:"brand added",
+                    data:categryData
+                })
+            })
+
+            .catch((err)=>{
+                res.json({
+                    status:500,
+                    success:false,
+                    message:'Internal Server error',
+                    error:err
+                })
+            })
+
+        }
+        else{
+            res.json({
+                status:200,
+                success:true,
+                message:"brand already exists",
+                data:brandData
+            })
+        }
     })
 
     .catch((err)=>{
         res.json({
             status:500,
             success:false,
-            message:'Internal Server error',
+            message:"Internal server error!",
             error:err
         })
     })
+    
+    }
 
+    else{
+        res.json({
+            status:422,
+            success:false,
+            message:validation
+        })
+    } 
 }
 
-all= async(req,res)=>{
-    try{
-        const result = await brandModel.find()
 
-        console.log("Brand Data fetched");
+all=(req,res)=>{
+    let formData = req.body
+    let limit = formData.limit
+    let currentPage = formData.currentPage
+
+    delete formData.limit
+    delete formData.currentPage
+
+    brandModel.find(formData)
+    .limit(limit)
+    .skip((currentPage-1)*limit)
+
+    .then(async (brandData)=>{
+        if(brandData.length>0){
+            let total = await brandModel.countDocuments().exec()
+            res.json({
+                status:200,
+                success:true,
+                message:"brand Data fetched",
+                total:total,
+                data:brandData
+            })
+        }
+        else{
+            res.json({
+                status:404,
+                success:false,
+                message:"brand not found"
+            })
+        }
         
+    })
 
-        res.json({
-            status:200,
-            success:true,
-            message:"Brand Data fetched",
-            data:result
-        })
-    }
-    catch{
+    .catch(()=>{
         res.json({
             status:500,
             success:false,
-            message:"Internal server error",
-            error:err
+            message:"Internal server error"
         })
-    }
+    })   
 }
 
 

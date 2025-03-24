@@ -1,57 +1,126 @@
 const productModel = require('./productModel')
 
-add=(req,res)=>{
-    // Object for accessing the product schema
-    let productObj = new productModel()
+add= async (req,res)=>{
+    let validation =""
+    let formData = req.body
 
-    // adding values from queries
-    productObj.productCategory = req.query.productCategory
-    productObj.brand = req.query.brand
-    productObj.productName = req.query.productName
-    productObj.productPrice = req.query.productPrice
-    productObj.save()
+    if(!formData.productCategory){
+        validation="Category is required"
+    }
+    if(!formData.brand){
+        validation="Brand is required"
+    }
+    if(!formData.productName){
+        validation="Name is required"
+    }
+    if(!formData.productPrice){
+        validation="Price is required"
+    }
 
+    if(!validation.trim()){
+        // To check duplicates
+    await productModel.findOne({productName:formData.productName})
+    
     .then((productData)=>{
-        res.json({
-            status:200,
-            success:true,
-            message:"Product Added",
-            data:productData
-        })  
+        if(!productData){
+            // obj for accessing the schema
+            let productObj = new productModel()
+
+            // adding the values from queries
+            productObj.productCategory = req.body.productCategory
+            productObj.brand = req.body.brand
+            productObj.productName = req.body.productName
+            productObj.productPrice = req.body.productPrice
+            productObj.save()
+
+            .then((categryData)=>{
+                res.json({
+                    status:200,
+                    success:true,
+                    message:"Product added",
+                    data:categryData
+                })
+            })
+
+            .catch((err)=>{
+                res.json({
+                    status:500,
+                    success:false,
+                    message:'Internal Server error',
+                    error:err
+                })
+            })
+
+        }
+        else{
+            res.json({
+                status:200,
+                success:true,
+                message:"Product already exists",
+                data:productData
+            })
+        }
     })
 
     .catch((err)=>{
         res.json({
             status:500,
             success:false,
-            message:"Internal server error",
+            message:"Internal server error!",
             error:err
         })
     })
-}
-
-all= async(req,res)=>{
-    try{
-        const result = await productModel.find()
-        
-        console.log("Product Data fetched");
-        
-
+    
+    }
+    else{
         res.json({
-            status:200,
-            success:true,
-            message:"Product Data fetched",
-            data:result
+            status:422,
+            success:false,
+            message:validation
         })
     }
-    catch{
+}
+
+
+all= async(req,res)=>{
+    let formData = req.body
+    let limit = formData.limit
+    let currentPage = formData.currentPage
+
+    delete formData.limit
+    delete formData.currentPage
+
+    productModel.find(formData)
+    .limit(limit)
+    .skip((currentPage-1)*limit)
+
+    .then(async (productData)=>{
+        if(productData.length>0){
+            let total = await productModel.countDocuments().exec()
+            res.json({
+                status:200,
+                success:true,
+                message:"Product Data fetched",
+                total:total,
+                data:productData
+            })
+        }
+        else{
+            res.json({
+                status:404,
+                success:false,
+                message:"Product not found"
+            })
+        }
+    })
+
+    .catch(()=>{
         res.json({
             status:500,
             success:false,
-            message:"Internal server error",
-            error:err
+            message:"Internal server error"
         })
-    }
+    })
 }
 
 module.exports={add,all}
