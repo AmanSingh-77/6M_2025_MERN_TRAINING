@@ -27,3 +27,6 @@ app.use('/api',api)
 
 // for using database
 const db = require("./Server/config/db")
+
+// for access to the images folder
+app.use(express.static("./Server/public/"))

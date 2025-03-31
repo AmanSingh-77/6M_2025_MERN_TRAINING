@@ -10,6 +10,9 @@ add= async (req,res)=>{
     if(!req.body.brandDesc){
         validation += "Description is required"
     }
+    if(!req.file){
+        validation+="Image is required"
+    }
 
     if(!validation.trim()){
         // To check duplicates
@@ -24,9 +27,12 @@ add= async (req,res)=>{
             brandObj.autoId = total+1
             brandObj.brandName = req.body.brandName
             brandObj.brandDesc = req.body.brandDesc
+            brandObj.brandImage = "brandImages/" + req.file.filename
             brandObj.save()
 
             .then((brandData)=>{
+                console.log(req.file);
+                
                 res.json({
                     status:200,
                     success:true,

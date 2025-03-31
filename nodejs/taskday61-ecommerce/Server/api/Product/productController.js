@@ -7,16 +7,16 @@ add= async (req,res)=>{
     let formData = req.body
 
     if(!formData.productCategory){
-        validation="Category is required"
+        validation+="Category is required "
     }
     if(!formData.brand){
-        validation="Brand is required"
+        validation+="Brand is required "
     }
     if(!formData.productName){
-        validation="Name is required"
+        validation+="Name is required "
     }
     if(!formData.productPrice){
-        validation="Price is required"
+        validation+="Price is required "
     }
 
     if(!validation.trim()){

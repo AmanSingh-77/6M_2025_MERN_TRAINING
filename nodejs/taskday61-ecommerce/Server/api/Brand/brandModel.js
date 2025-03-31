@@ -5,6 +5,7 @@ let brandSchema = mongoose.Schema({
     autoId:{type:Number, default:1},
     brandName: {type:String, default:""},
     brandDesc:{type:String, default:""},
+    brandImage:{type:String, default:"no-pic.jpg"},
     status:{type:Boolean,default:true},
     createdAt:{type:Date,default:Date.now()}
 })
