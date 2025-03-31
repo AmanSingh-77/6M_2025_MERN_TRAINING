@@ -3,9 +3,7 @@ const ProductController = require('../api/Product/productController')
 const BrandController = require('../api/Brand/brandController')
 
 const router = require("express").Router()
-
 const multer = require("multer")
-
 
 
 // Brand image multer code
@@ -21,6 +19,20 @@ const brandStorage = multer.diskStorage({
   const brandUpload = multer({ storage: brandStorage })
 
 
+// Product image multer code
+const productStorage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './Server/public/productImages/')
+    },
+    filename: function (req, file, cb) {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, file.fieldname + '-' + uniqueSuffix + '-' + file.originalname)
+    }
+  })
+  const productUpload = multer({ storage: productStorage })
+
+
+
 // Category api's 
 router.post('/categoryAdd',CategoryController.add)
 router.post('/categoryAll',CategoryController.all)
@@ -30,7 +42,7 @@ router.post('/categoryDelete', CategoryController.deleteCategory)
 router.post('/categoryStatus', CategoryController.changeStatus)
 
 //Product api's 
-router.post('/productAdd', ProductController.add)
+router.post('/productAdd', productUpload.single("productImage") , ProductController.add)
 router.post('/productAll', ProductController.all)
 router.post('/productSingle', ProductController.single)
 router.post('/productUpdate', ProductController.update)

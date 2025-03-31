@@ -18,6 +18,9 @@ add= async (req,res)=>{
     if(!formData.productPrice){
         validation+="Price is required "
     }
+    if(!req.file){
+        validation+="Image is required "
+    }
 
     if(!validation.trim()){
         // To check duplicates
@@ -34,6 +37,7 @@ add= async (req,res)=>{
             productObj.brand = req.body.brand
             productObj.productName = req.body.productName
             productObj.productPrice = req.body.productPrice
+            productObj.productImage = "productImages/" + req.file.filename
             productObj.save()
 
             .then((productData)=>{
