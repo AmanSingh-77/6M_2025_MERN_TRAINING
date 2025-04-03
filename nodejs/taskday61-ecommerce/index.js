@@ -25,9 +25,16 @@ app.use(express.json({limit:"40mb"}))
 const api = require('./Server/routes/apiRoutes')
 app.use('/api',api)
 
+// for using product and category api's
+const admin = require('./Server/routes/adminRoutes')
+app.use('/admin',admin)
+
 
 // for using database
 const db = require("./Server/config/db")
+
+// for seeding the admin
+const seed = require("./Server/config/seed")
 
 // for access to the images folder
 app.use(express.static("./Server/public/"))
