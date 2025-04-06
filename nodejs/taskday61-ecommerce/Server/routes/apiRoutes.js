@@ -14,6 +14,15 @@ router.post("/login", userController.login)
 router.post("/user/register", customerController.register)
 
 
+
+// To provide access
+router.use(require("../middleware/tokenChecker"))
+
+
+
+// Change password
+router.post("/changePassword", userController.changePassword)
+
 // Category api's 
 router.post('/categoryAll',CategoryController.all)
 router.post('/categorySingle', CategoryController.single)

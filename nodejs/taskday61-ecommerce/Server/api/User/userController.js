@@ -72,4 +72,82 @@ login = async(req,res)=>{
     }
 }
 
-module.exports = {login}
+changePassword = (req,res)=>{
+    let validation = ""
+    let formData = req.body
+
+    if(!formData.oldPassword){
+        validation+= "Old password is missing"
+    }
+
+    if(!formData.newPassword){
+        validation+= " New password is missing"
+    }
+
+    if(!formData.confirmPassword){
+        validation+= " Confirm password is missing"
+    }
+
+    if(!!validation.trim()){
+        res.json({
+            status:422,
+            success:false,
+            message:validation
+        })
+    }
+
+    else{
+        if(formData.newPassword===formData.confirmPassword){
+            userModel.findOne({_id:req.decoded.userId})
+            .then((userData)=>{
+                let result = bcryptjs.compareSync(formData.oldPassword,userData.password)
+
+                if(result){
+                    userData.password = bcryptjs.hashSync(formData.newPassword,10)
+                    userData.save()
+
+                    .then((newData)=>{
+                        res.json({
+                            status:200,
+                            success:true,
+                            message:"Password changed successfully !!",
+                            newData
+                        })
+                    })
+                    .catch((err)=>{
+                        res.json({
+                            status:500,
+                            success:false,
+                            message:"Internal Server Error !!",
+                            error:err
+                        })
+                    })
+                }
+                else{
+                    res.json({
+                        status:404,
+                        success:false,
+                        message:"Incorrect password entered !!"
+                    })
+                }
+            })
+            .catch((err)=>{
+                res.json({
+                    status:500,
+                    success:false,
+                    message:"Internal Server Error !!",
+                    error:err
+                })
+            })
+        }
+        else{
+            res.json({
+                status:200,
+                success:false,
+                message:"New and confirm password does not match !!"
+            })
+        }
+    }
+}
+
+module.exports = {login, changePassword}
