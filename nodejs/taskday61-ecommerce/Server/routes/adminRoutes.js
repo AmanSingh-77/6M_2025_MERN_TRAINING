@@ -13,29 +13,13 @@ router.use(require("../middleware/adminTokenChecker"))
 
 
 // Brand image multer code
-const brandStorage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, './Server/public/brandImages/')
-    },
-    filename: function (req, file, cb) {
-      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-      cb(null, file.fieldname + '-' + uniqueSuffix + '-' + file.originalname)
-    }
-  })
-  const brandUpload = multer({ storage: brandStorage })
+const brandStorage = multer.memoryStorage()
+const brandUpload = multer({ storage: brandStorage })
 
 
 // Product image multer code
-const productStorage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, './Server/public/productImages/')
-    },
-    filename: function (req, file, cb) {
-      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-      cb(null, file.fieldname + '-' + uniqueSuffix + '-' + file.originalname)
-    }
-  })
-  const productUpload = multer({ storage: productStorage })
+const productStorage = multer.memoryStorage()
+const productUpload = multer({ storage: productStorage })
 
 
 

@@ -1,3 +1,4 @@
+const { uploadImg } = require('../../utilities/helper')
 const productModel = require('./productModel')
 
 add= async (req,res)=>{
@@ -26,7 +27,7 @@ add= async (req,res)=>{
         // To check duplicates
     await productModel.findOne({productName:formData.productName})
     
-    .then((productData)=>{
+    .then(async (productData)=>{
         if(!productData){
             // obj for accessing the schema
             let productObj = new productModel()
@@ -37,7 +38,18 @@ add= async (req,res)=>{
             productObj.brand = req.body.brand
             productObj.productName = req.body.productName
             productObj.productPrice = req.body.productPrice
-            productObj.productImage = "productImages/" + req.file.filename
+            try{
+                let url = await uploadImg(req.file.buffer)
+                productObj.productImage = url
+            }
+            catch(err){
+                res.json({
+                    status:500,
+                    success:false,
+                    message:"Error uploading the product image !!",
+                    error:err
+                })
+            }
             productObj.save()
 
             .then((productData)=>{

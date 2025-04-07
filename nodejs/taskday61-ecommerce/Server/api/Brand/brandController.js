@@ -1,3 +1,4 @@
+const { uploadImg } = require('../../utilities/helper')
 const brandModel = require('./brandModel')
 
 add= async (req,res)=>{
@@ -18,7 +19,7 @@ add= async (req,res)=>{
         // To check duplicates
     await brandModel.findOne({brandName:req.body.brandName})
     
-    .then((brandData)=>{
+    .then(async (brandData)=>{
         if(!brandData){
             // obj for accessing the schema
             let brandObj = new brandModel()
@@ -27,7 +28,18 @@ add= async (req,res)=>{
             brandObj.autoId = total+1
             brandObj.brandName = req.body.brandName
             brandObj.brandDesc = req.body.brandDesc
-            brandObj.brandImage = "brandImages/" + req.file.filename
+            try{
+                let url = await uploadImg(req.file.buffer)
+                brandObj.brandImage = url
+            }
+            catch(err){
+                res.json({
+                    status:500,
+                    success:false,
+                    message:"Error uploading the brand image !!",
+                    error:err
+                })
+            }
             brandObj.save()
 
             .then((brandData)=>{
