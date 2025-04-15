@@ -3,6 +3,7 @@ const ProductController = require('../api/Product/productController')
 const BrandController = require('../api/Brand/brandController')
 const userController = require("../api/User/userController")
 const customerController = require("../api/Customer/customerController")
+const dashboardController = require("../api/Dashboard/dashboardController")
 
 const router = require("express").Router()
 const multer = require("multer")
@@ -21,6 +22,8 @@ const brandUpload = multer({ storage: brandStorage })
 const productStorage = multer.memoryStorage()
 const productUpload = multer({ storage: productStorage })
 
+// Dashboard Api
+router.post("/dashboard", dashboardController.dashboard)
 
 
 // Category api's 
