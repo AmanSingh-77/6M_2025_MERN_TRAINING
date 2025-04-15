@@ -16,7 +16,7 @@ dashboard = async (req,res)=>{
             message:"Data Fetched Successfully !!",
             brandTotal,
             categoryTotal,
-            productTotal,
+            productTotal,              
             customerTotal
         })
     }
