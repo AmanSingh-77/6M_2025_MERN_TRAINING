@@ -96,11 +96,11 @@ add= async (req,res)=>{
 
 all=(req,res)=>{
     let formData = req.body
-    let limit = formData.limit
-    let currentPage = formData.currentPage
+    let limit = formData?.limit
+    let currentPage = formData?.currentPage
 
-    delete formData.limit
-    delete formData.currentPage
+    delete formData?.limit
+    delete formData?.currentPage
 
     brandModel.find(formData)
     .limit(limit)
